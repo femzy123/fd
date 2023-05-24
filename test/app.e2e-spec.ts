@@ -26,6 +26,18 @@ describe('AppController (e2e)', () => {
       .expect('Hello World!');
   });
 
+  it('/ai/openaiResponse (POST) - should get a summary response from OpenAI', async () => {
+    const text = 'Give a summary or insight into prenatal care';
+
+    const response = await request(app.getHttpServer())
+      .post('/ai/openaiResponse')
+      .send({ text })
+      .expect(200);
+
+    const expectedSummary = response.body;
+    expect(typeof expectedSummary).toBe('object');
+  });
+
   it('/summaries (POST) - should create a new summary', async () => {
     const highlight = 'Lorem ipsum';
     const summary = 'Summary';

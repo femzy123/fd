@@ -13,6 +13,7 @@ export class SummariesService {
     const createdSummary = new this.summaryModel({
       highlightedText,
       summary,
+      createdAt: new Date().toISOString(),
     });
     return createdSummary.save();
   }
