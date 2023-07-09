@@ -1,7 +1,7 @@
-# Frontdoor Assessment Server
+# Frontdoor Server
 ## Description
 
-This is a REST API application that provides API endpoints for managing user's highlighted texts and it's corresponding AI generated summaries. 
+This is a REST API application that provides API endpoints for managing user's highlighted texts and it's corresponding AI-generated summaries. 
 
 ## Prerequisites
 
